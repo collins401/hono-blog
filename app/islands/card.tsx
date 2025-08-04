@@ -14,8 +14,6 @@ export default function Card({
       href={link}
       class="relative block border border-transparent border-dashed cursor-pointer p-7 group rounded-2xl"
     >
-      <div class="absolute inset-0 z-20 w-full h-full duration-300 ease-out  border border-dashed  rounded-2xl border-neutral-300  group-hover:-translate-x-1 group-hover:-translate-y-1"></div>
-      <div class="absolute inset-0 z-10 w-full h-full duration-300 ease-out border border-dashed rounded-2xl border-neutral-300  group-hover:translate-x-1 group-hover:translate-y-1"></div>
       <div class="relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
         <h2 class="flex items-center mb-3">
           <span
