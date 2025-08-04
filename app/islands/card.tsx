@@ -16,21 +16,18 @@ export default function Card({
     >
       <div class="relative z-30 duration-300 ease-out group-hover:-translate-x-1 group-hover:-translate-y-1">
         <h2 class="flex items-center mb-3">
-          <span
+          <div
             href={link}
-            class="text-base font-bold leading-tight tracking-tight sm:text-lg "
+            class="text-lg text-[#317039] font-bold leading-tight tracking-tight sm:text-2xl "
           >
-            <div></div>
             {frontmatter.title}
-          </span>
+          </div>
           <Arrow />
         </h2>
-        <p class="text-sm text-neutral-600">
+        <p class="text-neutral-600">
           <span>{frontmatter.desc}</span>
         </p>
-        <div class="mt-2.5 text-xs font-medium text-neutral-800">
-          {frontmatter.date}
-        </div>
+        <div class="mt-2 text-sm text-neutral-400">{frontmatter.date}</div>
       </div>
     </a>
   );

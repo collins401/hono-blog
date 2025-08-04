@@ -5,10 +5,10 @@ export default function Posts() {
     eager: true,
   });
   return (
-    <div>
+    <div class="pt-10 max-w-3xl mx-4 md:mx-auto">
       <h2>My Posts</h2>
       <p>最近更新</p>
-      <div>
+      <div class="mt-4">
         <div class="space-x-6">
           {Object.entries(posts).map(([id, module]) => {
             if (module.frontmatter) {

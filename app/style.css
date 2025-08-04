@@ -104,6 +104,7 @@
   --shadow-2xl: var(--shadow-2xl);
 
   --dark-mode: disabled;
+  --tw-prose-bullets: oklch(0.63 0.01 258.29);
 }
 body {
   @apply bg-background text-foreground;
@@ -112,4 +113,7 @@ body {
 
 * {
   border-color: var(--color-border);
+}
+h1 {
+  color: #317039;
 }

@@ -27,11 +27,11 @@ export default jsxRenderer(({ children, title, frontmatter }) => {
             </nav>
           </div>
         </header>
-        <main class={"max-w-5xl mx-auto min-h-[calc(100svh-8rem)]"}>
+        <main class={"max-w-5xl mx-auto pb-8 min-h-[calc(100svh-8rem)]"}>
           {children}
         </main>
         <footer class="h-16 border-t border-dashed pt-4 mx-auto text-center">
-          <p>&copy; 2024 My Blog. All rights reserved.</p>
+          <p>&copy; 2025 My Blog. All rights reserved.</p>
         </footer>
       </body>
     </html>

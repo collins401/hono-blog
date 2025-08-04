@@ -1,3 +1,6 @@
 export type Meta = {
-  title: string
-}
+  title: string;
+  date: string;
+  desc: string;
+  tag: string[];
+};
