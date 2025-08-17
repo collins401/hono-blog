@@ -3,9 +3,23 @@ import Card from "../islands/card";
 import type { Meta } from "../types";
 
 export default function Home() {
-  const posts = import.meta.glob<{ frontmatter: Meta }>("./post/*.mdx", {
-    eager: true,
-  });
+  const posts = Object.entries(
+    import.meta.glob<{ frontmatter: Meta }>("./post/*.mdx", {
+      eager: true,
+    })
+  )
+    .sort(([, a], [, b]) => {
+      const dateA = new Date(a.frontmatter?.date || "");
+      const dateB = new Date(b.frontmatter?.date || "");
+      return dateB.getTime() - dateA.getTime(); // 按时间降序排序（最新的在前）
+    })
+    .reduce(
+      (acc, [key, value]) => {
+        acc[key] = value;
+        return acc;
+      },
+      {} as Record<string, { frontmatter: Meta }>
+    );
   return (
     <>
       <div class="flex mx-5 md:mx-0 pt-10">
